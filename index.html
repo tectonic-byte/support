@@ -1,26 +1,308 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaffer - Support</title>
+    <title>Support - Gaffer</title>
     <style>
-      body { font-family: -apple-system, system-ui, sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; color: #1a1a2e; }
-      h1 { font-size: 1.8rem; }
-      a { color: #2d6a4f; }
-      .email { font-size: 1.1rem; margin: 24px 0; }
+        :root {
+            --primary-text: #2c3e50;
+            --secondary-text: #7f8c8d;
+            --accent-green: #27ae60;
+            --bg-color: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            background-color: var(--bg-color);
+        }
+
+        header {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        h2 {
+            color: var(--accent-green);
+            font-size: 1.25rem;
+            margin-top: 32px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 0.875rem;
+            color: var(--secondary-text);
+            margin-bottom: 24px;
+        }
+
+        section {
+            margin-bottom: 24px;
+        }
+
+        a {
+            color: var(--accent-green);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #1e8449;
+        }
+
+        p {
+            margin: 8px 0;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        details {
+            margin-bottom: 12px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 0;
+        }
+
+        details[open] {
+            padding-bottom: 12px;
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            padding: 12px 16px;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: "+";
+            display: inline-block;
+            width: 20px;
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        details[open] summary::before {
+            content: "\2212";
+        }
+
+        details p, details ol, details ul {
+            padding: 0 16px;
+        }
+
+        .footer-contact {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #eee;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Gaffer Support</h1>
-    <p>Need help with Gaffer, the Fantasy Premier League companion app?</p>
-    <p class="email">Email us at <a href="mailto:support@tectonicbyte.com">support@tectonicbyte.com</a></p>
-    <h2>FAQ</h2>
-    <p><strong>Where do I find my FPL Team ID?</strong><br>
-    Log in at fantasy.premierleague.com, go to the "Points" tab, and check the number in the URL after /entry/.</p>
-    <p><strong>Why am I not receiving notifications?</strong><br>
-    Make sure notifications are enabled in both the app settings and your device's system settings.</p>
-    <p><strong>How do I delete my account?</strong><br>
-    Go to Settings in the app and tap "Delete Account" at the bottom.</p>
-  </body>
-  </html>
+</head>
+<body>
+    <header>
+        <h1>Gaffer Support</h1>
+        <p class="subtitle">Need help with Gaffer, the Fantasy Premier League companion app? Find answers below or get in touch.</p>
+    </header>
+
+    <section>
+        <h2>Getting Started</h2>
+
+        <details>
+            <summary>How does Gaffer work?</summary>
+            <p>Register your FPL Team ID and Gaffer will monitor your squad during live matches. You'll receive instant push notifications when your players score goals, get assists, receive cards, earn bonus points, and more.</p>
+        </details>
+
+        <details>
+            <summary>Where do I find my FPL Team ID?</summary>
+            <ol>
+                <li>Log in at <a href="https://fantasy.premierleague.com">fantasy.premierleague.com</a></li>
+                <li>Go to the <strong>Points</strong> tab</li>
+                <li>Check the number in the URL after <code>/entry/</code> — that's your Team ID</li>
+            </ol>
+            <p>For example, if the URL is <code>fantasy.premierleague.com/entry/123456/event/1</code>, your Team ID is <strong>123456</strong>.</p>
+        </details>
+
+        <details>
+            <summary>How do I register my team?</summary>
+            <ol>
+                <li>Sign in with your email or Google account</li>
+                <li>Tap <strong>Register Team</strong> on the home screen</li>
+                <li>Enter your FPL Team ID</li>
+                <li>Gaffer will sync your squad and start monitoring your players</li>
+            </ol>
+        </details>
+
+        <details>
+            <summary>Can I track multiple FPL teams?</summary>
+            <p>Free accounts can track 1 team. With a <strong>Season Pass</strong> subscription, you can track up to 5 teams. To add another team, tap <strong>Register Team</strong> from the home screen.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>Notifications</h2>
+
+        <details>
+            <summary>Why am I not receiving notifications?</summary>
+            <p>There are a few things to check:</p>
+            <ul>
+                <li><strong>Device settings</strong> — Make sure notifications are enabled for Gaffer in your device's system settings</li>
+                <li><strong>App settings</strong> — Open Gaffer, go to Settings, and check that your desired alert types are toggled on</li>
+                <li><strong>Match window</strong> — Notifications are only sent during live matches. Outside of match windows, there are no alerts to send</li>
+                <li><strong>Focus/Do Not Disturb</strong> — Check that your device isn't silencing notifications</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>What notification types are available?</summary>
+            <p><strong>Free (all accounts):</strong></p>
+            <ul>
+                <li>Goals and assists</li>
+                <li>Yellow and red cards</li>
+                <li>Penalties</li>
+            </ul>
+            <p><strong>Season Pass:</strong></p>
+            <ul>
+                <li>Bonus points</li>
+                <li>Defensive alerts (clean sheets, saves)</li>
+                <li>Match activity</li>
+                <li>Gameweek start alerts</li>
+                <li>AI-powered match summaries</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Can I get notifications for bench players?</summary>
+            <p>Yes. In Settings under <strong>Event Alerts</strong>, expand <strong>Customize</strong> and toggle on <strong>Substitutes</strong> to receive notifications for players on your bench.</p>
+        </details>
+
+        <details>
+            <summary>What are AI Summaries?</summary>
+            <p>AI Summaries are periodic match recaps generated by AI during live gameweeks. They provide a natural-language digest of recent events affecting your squad. This feature requires a Season Pass subscription.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>Season Pass</h2>
+
+        <details>
+            <summary>What is the Season Pass?</summary>
+            <p>The Season Pass is an auto-renewing annual subscription that unlocks all premium features, including bonus point alerts, defensive alerts, match activity notifications, AI summaries, and the ability to track up to 5 FPL teams.</p>
+        </details>
+
+        <details>
+            <summary>How do I subscribe?</summary>
+            <p>Go to <strong>Settings</strong> and tap the <strong>Subscription</strong> section, then tap <strong>Season Pass</strong> to view pricing and subscribe. Payment is processed through your Apple App Store or Google Play account.</p>
+        </details>
+
+        <details>
+            <summary>How do I cancel my subscription?</summary>
+            <p>You can cancel your subscription at any time through your device's subscription settings:</p>
+            <ul>
+                <li><strong>iPhone/iPad:</strong> Settings &gt; Apple ID &gt; Subscriptions &gt; Gaffer</li>
+                <li><strong>Android:</strong> Google Play Store &gt; Profile &gt; Payments &amp; subscriptions &gt; Subscriptions &gt; Gaffer</li>
+            </ul>
+            <p>Your premium features will remain active until the end of the current billing period. Cancelling does not trigger a refund for the remaining time.</p>
+        </details>
+
+        <details>
+            <summary>How do I restore a previous purchase?</summary>
+            <p>If you reinstalled the app or switched devices, go to <strong>Settings</strong> &gt; <strong>Subscription</strong> &gt; <strong>Season Pass</strong> and tap <strong>Restore purchases</strong>. This will check your Apple or Google account for an existing subscription.</p>
+        </details>
+
+        <details>
+            <summary>How do I request a refund?</summary>
+            <p>All purchases are processed by Apple or Google. To request a refund:</p>
+            <ul>
+                <li><strong>Apple:</strong> Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></li>
+                <li><strong>Google:</strong> Visit <a href="https://support.google.com/googleplay/answer/2479637">Google Play refund support</a></li>
+            </ul>
+        </details>
+    </section>
+
+    <section>
+        <h2>Account</h2>
+
+        <details>
+            <summary>How do I delete my account?</summary>
+            <p>Go to <strong>Settings</strong> and tap <strong>Delete Account</strong> at the bottom of the screen. You will be asked to confirm. This action is permanent and will remove all your data.</p>
+            <p><strong>Important:</strong> Deleting your account does not automatically cancel an active subscription. You must cancel your subscription separately through your device's subscription settings before deleting your account.</p>
+        </details>
+
+        <details>
+            <summary>How do I sign out?</summary>
+            <p>Go to <strong>Settings</strong> and tap <strong>Sign Out</strong>. Your account and data will be preserved — you can sign back in at any time.</p>
+        </details>
+
+        <details>
+            <summary>Can I change my email address?</summary>
+            <p>The app uses your Firebase authentication email. If you signed up with email and password, please contact us at <a href="mailto:support@tectonicbyte.com">support@tectonicbyte.com</a> for assistance with changing your email.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>Troubleshooting</h2>
+
+        <details>
+            <summary>The app says my FPL Team ID is invalid</summary>
+            <p>Double-check that you're entering just the numeric ID from your FPL URL, without any extra characters. Your team must also be publicly visible on the FPL website. Private teams cannot be synced.</p>
+        </details>
+
+        <details>
+            <summary>My squad is out of date</summary>
+            <p>Gaffer syncs your squad automatically. If your squad appears outdated, try removing the team from Settings and re-registering it with the same Team ID. This will trigger a fresh sync.</p>
+        </details>
+
+        <details>
+            <summary>The app is not loading or crashing</summary>
+            <p>Try the following steps:</p>
+            <ol>
+                <li>Force-close the app and reopen it</li>
+                <li>Check your internet connection</li>
+                <li>Update to the latest version from the App Store or Google Play</li>
+                <li>If the issue persists, contact us with details about your device and the problem</li>
+            </ol>
+        </details>
+    </section>
+
+    <section>
+        <h2>Legal</h2>
+
+        <details>
+            <summary>Is Gaffer affiliated with the Premier League?</summary>
+            <p>No. Gaffer is an independent, unofficial application. It is not affiliated with, endorsed by, or connected to the Premier League, Fantasy Premier League, or any of their subsidiaries.</p>
+        </details>
+
+        <details>
+            <summary>Where can I find the Privacy Policy and Terms of Use?</summary>
+            <p>You can find them in the app under <strong>Settings</strong> &gt; <strong>Privacy &amp; Terms</strong>, or online:</p>
+            <ul>
+                <li><a href="https://privacy.tectonicbyte.com">Privacy Policy</a></li>
+                <li><a href="https://terms.tectonicbyte.com">Terms of Use</a></li>
+            </ul>
+        </details>
+    </section>
+
+    <div class="footer-contact">
+        <p>Still need help? Contact us at <a href="mailto:support@tectonicbyte.com">support@tectonicbyte.com</a></p>
+    </div>
+</body>
+</html>
